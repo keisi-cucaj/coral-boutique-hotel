@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coral Boutique Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            max-width: 1200px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coral Boutique Hotel</h1>
+    <div class="gallery">
+        <a href="#img1"><img src="location_enhanced.jpg" alt="Hotel Location"></a>
+        <a href="#img2"><img src="dh1.png" alt="Hotel Interior"></a>
+    </div>
+    <div id="img1" class="lightbox" onclick="window.location='#'">
+        <img src="location_enhanced.jpg" alt="Hotel Location">
+    </div>
+    <div id="img2" class="lightbox" onclick="window.location='#'">
+        <img src="dh1.png" alt="Hotel Interior">
+    </div>
+</body>
+</html>
